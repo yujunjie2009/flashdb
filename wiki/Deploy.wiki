@@ -1,5 +1,5 @@
 #labels Phase-Deploy
-# 系统安装部署.
+#System Deploy
 
 = 系统环境要求 =
 Java SE JRE 1.6 <br/>
