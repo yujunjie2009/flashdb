@@ -1,5 +1,5 @@
-#summary One-sentence summary of this page.
 #labels Phase-Deploy
+#系统安装部署.
 
 = 系统环境要求 =
 Java SE JRE 1.6 <br/>
