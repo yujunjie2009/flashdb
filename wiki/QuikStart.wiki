@@ -19,10 +19,10 @@ Web Server (如 Tomcat、Jetty、WebSphere、...) <br/>
 1、下载SQuirreL SQL Client安装包，根据提示进行安装;<br/>
 2、下载FlashDB的JDBC驱动包，并复制到SQuirreL安装目录的lib子目录下 <br/>
 3、启动SQuirreL，参照下图方式配置JDBC驱动 <br/>
-   <img src="http://code.google.com/p/flashdb/wiki/image/SQuirreL-AddDriver.png" /><br/>
-   <img src="http://code.google.com/p/flashdb/wiki/image/SQuirreL-DriverConf.png" /><br/>
+   <img src="http://flashdb.googlecode.com/svn/wiki/image/SQuirreL-AddDriver.png" /><br/>
+   <img src="http://flashdb.googlecode.com/svn/wiki/image/SQuirreL-DriverConf.png" /><br/>
 4、参照下图方式配置JDBC连接: <br/>
-   <img src="http://code.google.com/p/flashdb/wiki/image/SQuirreL-AliasAdd.png" /><br/>
-   <img src="http://code.google.com/p/flashdb/wiki/image/SQuirreL-AliasConf.png" /><br/>
+   <img src="http://flashdb.googlecode.com/svn/wiki/image/SQuirreL-AliasAdd.png" /><br/>
+   <img src="http://flashdb.googlecode.com/svn/wiki/image/SQuirreL-AliasConf.png" /><br/>
 5、连接后，左侧显示如下图即表示成功。 <br/>
-   <img src="http://code.google.com/p/flashdb/wiki/image/SQuirreL-AliasOpened.png" /><br/>
+   <img src="http://flashdb.googlecode.com/svn/wiki/image/SQuirreL-AliasOpened.png" /><br/>
