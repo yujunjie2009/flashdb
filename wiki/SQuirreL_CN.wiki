@@ -3,7 +3,7 @@
 
 1、下载<a href="http://squirrel-sql.sourceforge.net/">SQuirreL SQL Client</a>安装包，根据提示进行安装;<br/>
 2、下载FlashDB的<a href="http://flashdb.googlecode.com/svn/jar/flashdb-client-1.0.1.jar">JDBC驱动包</a>，并复制到SQuirreL安装目录的lib子目录下 <br/>
-3、启动SQuirreL，参照下图方式配置JDBC驱动 <br/>
+3、启动SQuirreL，参照下图方式配置FlashDB的JDBC驱动 <br/>
    <img src="http://flashdb.googlecode.com/svn/wiki/image_cn/SQuirreL-AddDriver.png" /><br/>
    <img src="http://flashdb.googlecode.com/svn/wiki/image_cn/SQuirreL-DriverConf.png" /><br/>
 {{{
