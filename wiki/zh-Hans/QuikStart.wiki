@@ -1,0 +1,32 @@
+#labels Phase-Deploy
+#summary 快速安装使用
+
+= 系统安装环境要求 =
+ * <a href="http://www.oracle.com/technetwork/java/javase/downloads/index.html">Java SE JRE 1.6</a><br/>
+ * Web Server (如 <a href="http://tomcat.apache.org/">Tomcat</a>、<a href="http://www.eclipse.org/jetty/">Jetty</a>、<a href="http://www.ibm.com/software/websphere/">WebSphere</a>、...) <br/>
+
+= 服务器系统安装 =
+1、下载所需文件，系统程序包<a href="">flashdb-webserver-xxx.war</a>和系统数据包<a href="">flashdb-data-xxx.zip</a> ; <br/>
+2、将系统数据包flashdb-data-xxx.zip解压缩到本地目录 /home/flashdb 下; <br/>
+3、在Web Server的JVM启动参数中添加以下内容,以设置FlashDB的工作目录:
+{{{
+-DFLASHDB_HOME=/home/flashdb -Dlogback.configurationFile=file:///home/flashdb/config/logback.xml
+}}}
+4、在Web Server的JVM启动参数中添加以下内容,以设置Java内存(具体数值可根据机器实际配置调整):
+{{{
+-Xms2048m
+}}}
+5、启动Web Server，部署flashdb-webserver-xxx.war, 建议上下文根使用 /flashdb <br/>
+6、访问FlashDB的首页(如 http://127.0.0.1:8080/flashdb/ )显示成功即可。<br/>
+
+= 客户端工具安装配置 =
+1、下载<a href="http://squirrel-sql.sourceforge.net/">SQuirreL SQL Client</a>安装包，根据提示进行安装;<br/>
+2、下载FlashDB的<a href="">JDBC驱动包</a>，并复制到SQuirreL安装目录的lib子目录下 <br/>
+3、启动SQuirreL，参照下图方式配置JDBC驱动 <br/>
+   <img src="http://flashdb.googlecode.com/svn/wiki/image/SQuirreL-AddDriver.png" /><br/>
+   <img src="http://flashdb.googlecode.com/svn/wiki/image/SQuirreL-DriverConf.png" /><br/>
+4、参照下图方式配置JDBC连接: <br/>
+   <img src="http://flashdb.googlecode.com/svn/wiki/image/SQuirreL-AliasAdd.png" /><br/>
+   <img src="http://flashdb.googlecode.com/svn/wiki/image/SQuirreL-AliasConf.png" /><br/>
+5、连接后，左侧显示如下图即表示成功。 <br/>
+   <img src="http://flashdb.googlecode.com/svn/wiki/image/SQuirreL-AliasOpened.png" /><br/>
