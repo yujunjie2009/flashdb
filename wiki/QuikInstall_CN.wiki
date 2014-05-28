@@ -7,7 +7,7 @@
 
 === 系统安装 ===
 1、下载所需文件，系统程序包<a href="http://flashdb.googlecode.com/svn/jar/flashdb-webserver-1.0.1.war">flashdb-webserver-xxx.war</a>和系统数据包<a href="http://flashdb.googlecode.com/svn/jar/flashdb-1.0.1.zip">flashdb-data-xxx.zip</a> ; <br/>
-2、将系统数据包flashdb-data-xxx.zip解压缩到本地目录 /home/flashdb 下; <br/>
+2、将系统数据包flashdb-data-xxx.zip解压缩为本地目录 /home/flashdb 下; <br/>
 3、在Web Server的JVM启动参数中添加以下内容,以设置FlashDB的工作目录:
 {{{
 -DFLASHDB_HOME=/home/flashdb -Dlogback.configurationFile=file:///home/flashdb/config/logback.xml
