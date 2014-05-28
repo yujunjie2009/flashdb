@@ -18,4 +18,4 @@
 }}}
 5、启动Web Server，部署flashdb-webserver-xxx.war, 建议上下文根使用 /flashdb <br/>
 6、访问FlashDB的首页(如 http://127.0.0.1:8080/flashdb/ )显示成功即可。<br/>
-7、推荐使用开源工具<a href="SQuirreL_CN">SQuirreL SQL Client</a>进行数据库操作.
+7、推荐使用开源工具<a href="http://code.google.com/p/flashdb/wiki/SQuirreL_CN">SQuirreL SQL Client</a>进行数据库操作.
