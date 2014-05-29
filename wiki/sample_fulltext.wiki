@@ -4,11 +4,11 @@
 DROP TABLE IF EXISTS sample_fulltext;
 CREATE TABLE sample_fulltext
  (
-    id INT,
-    ftitle VARCHAR tokenized=true,
-    ftext VARCHAR tokenized=true,
+    id INT auto_increment,
+    ftitle VARCHAR tokenized,
+    ftext VARCHAR tokenized,
     PRIMARY KEY (id)
- ) auto_increment =true comment='sample fulltext search'
+ ) comment 'sample fulltext search'
 ;
 </code>
 
