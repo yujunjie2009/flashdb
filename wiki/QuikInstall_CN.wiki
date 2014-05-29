@@ -6,7 +6,7 @@
  * Web Server (如 <a href="http://tomcat.apache.org/">Tomcat</a>、<a href="http://www.eclipse.org/jetty/">Jetty</a>、<a href="http://www.ibm.com/software/websphere/">Websphere</a>、...) <br/>
 
 === 系统安装 ===
-1、进入<a href="http://code.google.com/p/flashdb/source/browse/jar">下载页面</a>，下载所需文件，系统程序包<a href="http://code.google.com/p/flashdb/source/browse/jar/flashdb-webserver-1.0.1.war">flashdb-webserver-xxx.war</a>和系统数据包<a href="https://code.google.com/p/flashdb/source/browse/jar/flashdb-data-1.0.1.zip">flashdb-data-xxx.zip</a> ; <br/>
+1、进入<a href="http://code.google.com/p/flashdb/source/browse/jar">下载页面</a>，下载所需文件，系统程序包<a href="http://flashdb.googlecode.com/svn/jar/flashdb-webserver-1.0.1.war">flashdb-webserver-xxx.war</a>和系统数据包<a href="http://flashdb.googlecode.com/svn/jar/flashdb-data-1.0.1.zip">flashdb-data-xxx.zip</a> ; <br/>
 2、将系统数据包flashdb-data-xxx.zip解压缩到本地目录 /home/flashdb <br/>
 3、在Web Server的JVM启动参数中添加以下内容,以设置FlashDB的工作目录:
 {{{
