@@ -4,19 +4,19 @@
 DROP TABLE IF EXISTS sample_table;
 CREATE TABLE sample_table
  (
-    fa VARCHAR indexed=true,
-    fb INT indexed=true,
-    fc BIGINT indexed=true,
-    fd FLOAT indexed=true,
-    fe DOUBLE indexed=true,
-    ff DECIMAL indexed=true,
-    fg DATE indexed=true,
-    fh TIMESTAMP indexed=true,
-    fi BIT indexed=true,
-    fwords VARCHAR[] indexed=true comment='Multipy value',
-    ftext VARCHAR indexed=true tokenized=true comment='Fulltext search',
+    fa VARCHAR indexed,
+    fb INT indexed,
+    fc BIGINT indexed,
+    fd FLOAT indexed,
+    fe DOUBLE indexed,
+    ff DECIMAL indexed,
+    fg DATE indexed,
+    fh TIMESTAMP indexed,
+    fi BIT indexed,
+    fwords VARCHAR[] indexed COMMENT 'Multipy value',
+    ftext VARCHAR indexed tokenized COMMENT 'Fulltext search',
     PRIMARY KEY (fa)
- ) comment='sample data'
+ ) COMMENT 'sample data'
 ;
 </code>
 
