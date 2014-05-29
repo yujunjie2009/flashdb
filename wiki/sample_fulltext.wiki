@@ -1,0 +1,42 @@
+#summary SQL example for sample_fulltext
+#labels Phase-Implementation
+<code language="sql">
+DROP TABLE IF EXISTS sample_fulltext;
+CREATE TABLE sample_fulltext
+ (
+    id INT,
+    ftitle VARCHAR tokenized=true,
+    ftext VARCHAR tokenized=true,
+    PRIMARY KEY (id)
+ ) auto_increment =true comment='sample fulltext search'
+;
+</code>
+
+<code language="sql">
+TRUNCATE TABLE sample_fulltext;
+INSERT INTO sample_fulltext (ftitle,ftext)
+  VALUES ('widely', 'A serious flaw in two widely used security standards could give anyone access to your account information at Google, Microsoft, Facebook');
+INSERT INTO sample_fulltext (ftitle,ftext)
+  VALUES ('guaranteed', 'Google has extended its guaranteed support for Chrome OS on vendors Chromebooks to five years');
+INSERT INTO sample_fulltext (ftitle,ftext)
+  VALUES ('standards', 'A serious flaw in two widely used security standards could give anyone access to your account information at Google, Microsoft, Facebook');
+INSERT INTO sample_fulltext (ftitle,ftext)
+  VALUES ('Google, Microsoft', 'Google topped all companies in terms of best pay and benefits in a new survey by online jobs site Glassdoor');
+INSERT INTO sample_fulltext (ftitle,ftext)
+  VALUES ('personal', 'Deleting personal information online is costly and time-consuming for Web companies. Those difficulties are now set to be magnified in Europe for Google, Microsoft and others');
+INSERT INTO sample_fulltext (ftitle,ftext)
+  VALUES ('VirusTotal', 'Google VirusTotal Uploader for OS X comes at the heels of a similar tool for machines running on Microsoft Windows platform');
+FLUSH TABLE sample_fulltext;
+</code>
+
+<code language="sql">
+SELECT id,ftitle,ftext,Highlight('microsoft', ftext) FROM sample_fulltext
+ where Keyword('microsoft', ftitle,ftext)
+ order by Keyword('microsoft', ftitle,5,ftext,1);
+</code>
+
+<code language="sql">
+SELECT id,ftitle,ftext,Highlight('microsoft', ftext) FROM sample_fulltext
+ where AnyKeyword('microsoft google', ftitle,ftext)
+ order by Keyword('microsoft google', ftitle,5,ftext,1);
+</code>
