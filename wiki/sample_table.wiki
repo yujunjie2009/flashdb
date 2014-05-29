@@ -42,7 +42,7 @@ INSERT INTO sample_table (fa,fb,fc,fd,fe,ff,fg,fh,fi,fwords,ftext)
    , ['AA','BB','CC'], 'Google VirusTotal Uploader for OS X comes at the heels of a similar tool for machines running on Microsoft Windows platform');
 UPDATE sample_table SET fc=222333, fd=22.33
   WHERE fa='bbb';
-DELETE sample_table WHERE fa='aaa';
+DELETE FROM sample_table WHERE fa='aaa';
 FLUSH TABLE sample_table;
 </code>
 
