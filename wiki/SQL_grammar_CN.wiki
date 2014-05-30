@@ -1,6 +1,5 @@
 #summary SQL 语法
 #labels Phase-Implementation
-SELECT Identifier FROM Identifier (WHERE
 
 {{{
 CREATE TABLE tbl_name ( field_definition ..., PRIMARY KEY(..) ) [table_options]
