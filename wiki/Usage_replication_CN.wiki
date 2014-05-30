@@ -19,7 +19,7 @@ web_context=/flashdb/
 replication_master=192.168.0.10
 replication_slaves=192.168.0.11,192.168.0.12,192.168.0.13
 }}}
-<br/>
+
 配置项说明:
   * web_port: Web服务器的端口;
   * web_context: flashdb-webserver-xxx.war在Web中部署的上下文根;
