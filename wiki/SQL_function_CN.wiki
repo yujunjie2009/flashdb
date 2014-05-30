@@ -3,7 +3,7 @@
 
 === 分组聚合函数 ===
 || count() || 计数 ||  ||
-|| count(*) || 计数 ||  ||
+|| count(`*`) || 计数 ||  ||
 || count(column_name) || 字段去重计数 ||  ||
 || sum(column_name) || 数值求和 ||  ||
 || avg(column_name) || 数值平均值 ||  ||
