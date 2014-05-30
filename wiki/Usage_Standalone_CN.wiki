@@ -23,7 +23,7 @@ heart_beat_sql=select count(*) from sample_table
 === 一般用法 ===
 方式一:
   * 直接在同一张表上进行检索和写操作。
-  * 写入操作完成后，执行 <font color="blue">FLUSH TABLE xxx</font> 使检索可见。
+  * 写入操作完成后，执行 <font color="green">FLUSH TABLE xxx</font> 使检索可见。
 方式二：
   * 建a、b两张结构相同的表，a表用于检索服务，b表用于写操作;
   * 在b表写操作完成后，先执行 *OPTIMIZE TABLE b* 进行优化，再执行 *LOAD TABLE DATA a FROM LOCAL b* 使检索切换到新数据;
