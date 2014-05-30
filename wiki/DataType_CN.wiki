@@ -6,7 +6,7 @@
 || INT || int || getInt ||
 || BIGINT || long || getLong ||
 || FLOAT || float || getFloat ||
-|| DOUBLE || Double || getDouble ||
+|| DOUBLE || double || getDouble ||
 || DECIMAL || `BigDecimal` || getBigDecimal ||
 || DATE || Date || getDate ||
 || TIMESTAMP || Timestamp || getTimestamp  ||
