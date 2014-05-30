@@ -30,3 +30,10 @@ OPTIMIZE TABLE tbl_name
 }}}
 优化表： 表多次写入后，会产生数据碎片，优化有助于提高检索性能。
 <br/>
+
+{{{
+LOAD TABLE DATA tbl_name  FROM LOCAL tbl_name0
+LOAD TABLE DATA tbl_name  FROM SHARDING MASTER
+LOAD TABLE DATA tbl_name  FROM REPLICATION MASTER
+}}}
+同步表的数据
