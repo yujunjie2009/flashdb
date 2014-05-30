@@ -22,6 +22,7 @@ heart_beat_sql=select count(*) from sample_table
 
 web_port=8080
 web_context=/flashdb/
+
 replication_master=192.168.0.10
 replication_slaves=192.168.0.11,192.168.0.12,192.168.0.13
 }}}
