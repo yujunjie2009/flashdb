@@ -15,6 +15,22 @@ SELECT ... FROM ... [WHERE ...] [GROUP BY ...] [ORDER BY ...]
 <br/>
 
 {{{
+INSERT INTO tbl_name (col_name,...) VALUES (value,...)
+REPLACE INTO tbl_name (col_name,...) VALUES (value,...)
+INSERT IGNORE INTO tbl_name (col_name,...) VALUES (value,...)
+}}}
+插入单条数据。FlashDB插入数据时必须指定列名。三种写法在插入数据的主键重复时的处理不同:
+  * INSERT INTO - 主键重复时抛异常
+  * REPLACE INTO - 后写的数据覆盖之前的数据
+  * INSERT IGNORE INTO - 后写的数据被忽略，即保留之前的数据不变
+<br/>
+
+{{{
+FLUSH TABLE tbl_name
+}}}
+提交表的写缓存： FlashDB的特性，未FLUSH前，所有写操作对SELECT不可见。
+<br/>
+{{{
 DROP TABLE [IF EXISTS] tbl_name
 }}}
 删除表.
@@ -24,12 +40,6 @@ DROP TABLE [IF EXISTS] tbl_name
 TRUNCATE TABLE tbl_name
 }}}
 清空表的数据.
-<br/>
-
-{{{
-FLUSH TABLE tbl_name
-}}}
-提交表的写缓存： FlashDB的特性，未FLUSH前，所有写操作对SELECT不可见。
 <br/>
 
 {{{
