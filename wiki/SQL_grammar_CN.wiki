@@ -1,10 +1,17 @@
 #summary SQL 语法
 #labels Phase-Implementation
+SELECT Identifier FROM Identifier (WHERE
 
 {{{
 CREATE TABLE tbl_name ( field_definition ..., PRIMARY KEY(..) ) [table_options]
 }}}
 <a href="http://code.google.com/p/flashdb/wiki/SQL_CreateTable_CN">创建表</a>： FlashDB的表必须指定一个或多个字段作为主键。
+<br/>
+
+{{{
+SELECT ... FROM ... [WHERE ...] [GROUP BY ...] [ORDER BY ...]
+}}}
+<a href="http://code.google.com/p/flashdb/wiki/SQL_Select_CN">查询检索</a>： FlashDB的SELECT语法与ANSI SQL基本类似，但有一些特殊之处。
 <br/>
 
 {{{
