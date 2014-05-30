@@ -23,3 +23,8 @@
 || LuceneQuery('string') || 用于支持Lucene语法的过滤条件 ||  ||
 || Keyword(column_name) || keywords中所有词都必须出现 || 先反序列化为Java对象，再返回对象`.toString()` ||
 || AnyKeyword(keyword, column_name [, max_length]) || keywords中任一词都出现即可 ||  ||
+
+=== 排序函数 ===
+|| Keyword(column_name) || 根据TF/IDF模型的排序 ||  ||
+|| Probability(keyword) || 基于概率模型的排序 ||  ||
+|| AssignOrder(keyword) || 指定含特定值的行的顺序 ||  ||
