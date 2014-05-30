@@ -1,0 +1,32 @@
+#summary SELECT 语法
+#labels Phase-Implementation
+
+{{{
+SELECT ... FROM from_part [WHERE ...] [GROUP BY ...] [ORDER BY ...]
+}}}
+
+_from_part_:
+{{{
+tbl_main_name [alias_name]
+   [ LEFT JOIN tbl_name2 [alias_name2] ON tbl_main.colum_name = tbl2.colum_name ]
+   ...
+}}}
+
+各部分含义:
+  * select_expr - 返回值，字段名或sql函数
+    # 可使用AS指定返回的列名
+  * FROM - 检索的表
+    # 第一张表为主表
+    # 支持 LEFT JOIN , 但必须与主表关联，且仅支持单字段相等的关联关系
+    # 表可以指定别名，以便在该sql的其他部分使用
+  * WHERE - 条件过滤
+    # 未索引的字段，不可以进行检索
+    # 支持常见的<a href="#where_expr">条件表达式语法</a>
+    # 支持过滤函数
+  * GROUP BY - 分组计算
+    # 仅支持单一字段的
+    # 分词字段或多值字段，每个词/值是单独各算一次的
+  * ORDER BY - 结果排序
+    # 支持多重排序，逗号间隔
+    # 支持排序函数
+    # 支持使用 DESC 按倒序排
