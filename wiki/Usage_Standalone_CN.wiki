@@ -4,6 +4,7 @@
 === 适用场景 ===
 数据量和访问量不大。也可用于快速入门实验。
 <br/>
+
 === 配置(flashdb.properties) ===
 {{{
 default_analyzer_bean=IKAnalyzer
@@ -18,4 +19,5 @@ heart_beat_sql=select count(*) from sample_table
   * plugin_jar_files: 扩展插件所需的jar文件名(逗号间隔). jar文件存放在/home/flashdb/plugin/目录下;
   * heart_beat_sql: 服务心跳监测时执行的sql. 心跳监测页 http://127.0.0.1:8080/flashdb/do/heartbeat.json
 <br/>
+
 === 一般用法 ===
