@@ -1,4 +1,5 @@
 #summary data type
+#labels Phase-Implementation
 
 || *SQL* || *Java* || *`ResultSet.get(...)`* ||
 || VARCHAR || String || getString ||
@@ -6,11 +7,10 @@
 || INT || int || getInt ||
 || BIGINT || long || getLong ||
 || FLOAT || float || getFloat ||
-|| DOUBLE || Double || getDouble ||
+|| DOUBLE || double || getDouble ||
 || DECIMAL || `BigDecimal` || getBigDecimal ||
 || DATE || Date || getDate ||
 || TIMESTAMP || Timestamp || getTimestamp  ||
-|| VARBINARY || byte[] || getBytes ||
-
-FlashDB
+|| VARBINARY || `byte[]` || getBytes ||
+|| `x[]` || `x[]` || `(x[])getObject` ||
 	
