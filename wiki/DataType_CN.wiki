@@ -14,8 +14,7 @@
 || TIMESTAMP || Timestamp || getTimestamp  ||
 || VARBINARY || `byte[]` || getBytes ||
 || `x[]` || `x[]` || `(x[])getObject` ||
-
-<br/><br/>
+<br/>
 
 FlashDB与ANSI SQL的区别:
   * 所有类型都不能指定长度;
