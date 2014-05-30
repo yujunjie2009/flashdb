@@ -21,4 +21,4 @@ FlashDB与ANSI SQL的区别:
   * VARCHAR 最多存储2^31个字节(UTF-8)，保留末尾空格，区分大小写;
   * DECIMAL 最多存储4位小数, 取值范围 ±2^59 ;
   * INT/BIGINT 作为单字段主键时,值不能为0 ;
-  * 支持多值字段，如 `VARCHAR[]` <strong>,</strong> `INT[]` 。对应Java中相应的数组类型。检索WHERE/GROUP时，是根据其中每个值进行单独计算的 ;
+  * 支持多值字段，如 `VARCHAR[]` `INT[]` 。对应Java中相应的数组类型。检索WHERE/GROUP时，是根据其中每个值进行单独计算的 ;
