@@ -1,4 +1,5 @@
-#summary data type
+#summary 数据类型
+#labels Phase-Implementation
 
 || *SQL* || *Java* || *`ResultSet.get(...)`* ||
 || VARCHAR || String || getString ||
@@ -12,5 +13,9 @@
 || TIMESTAMP || Timestamp || getTimestamp  ||
 || VARBINARY || `byte[]` || getBytes ||
 || `x[]` || `x[]` || `(x[])getObject` ||
-FlashDB
-	
+<br/>
+
+FlashDB与ANSI SQL的区别:
+  * 所有类型都不能指定长度;
+  * VARCHAR 长度最大为2^31，保留末尾空格，区分大小写;
+  * DECIMAL 最多4位小数, 取值范围 ±2^59 ;
