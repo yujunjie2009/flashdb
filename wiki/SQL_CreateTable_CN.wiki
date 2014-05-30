@@ -4,19 +4,16 @@
 {{{
 CREATE TABLE tbl_name ( column_definition ..., PRIMARY KEY(..) ) [table_options]
 }}}
-<br/>
 
 _column_definition_:
 {{{
 col_name type [INDEXED] [TOKENIZED] [NOSTORED] [AUTO_INCREMENT] [NOT NULL] [COMMENT 'string'] [ANALYZER 'string'] [CODEC 'string']
 }}}
-<br/>
 
 _table_options_:
 {{{
 [ENGINE 'string'] [COMMENT 'string'] [ANALYZER 'string'] [WRITE_BUFFER_SIZE digit] [TEMP_IN_MEMORY]
 }}}
-<br/>
 
 各部分含义:
   * PRIMARY KEY - 指定主键字段名(若多个逗号间隔). FlashDB的表必须在指定主键
