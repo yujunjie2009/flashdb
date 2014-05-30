@@ -10,3 +10,18 @@ CREATE TABLE tbl_name ( field_definition ..., PRIMARY KEY(..) ) [table_options]
 {{{
 DROP TABLE [IF EXISTS] tbl_name
 }}}
+
+清空表的数据:
+{{{
+TRUNCATE TABLE tbl_name
+}}}
+
+提交表的写缓存 (FlashDB的特性,未FLUSH前,所有写操作对SELECT不可见):
+{{{
+FLUSH TABLE tbl_name
+}}}
+
+优化表 (表多次写入后，会产生数据碎片，优化有助于提高检索性能):
+{{{
+OPTIMIZE TABLE tbl_name
+}}}
