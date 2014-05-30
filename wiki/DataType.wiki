@@ -1,4 +1,4 @@
-#summary 数据类型
+#summary data type
 
 || *SQL* || *Java* || *`ResultSet.get(...)`* ||
 || VARCHAR || String || getString ||
@@ -7,7 +7,7 @@
 || BIGINT || long || getLong ||
 || FLOAT || float || getFloat ||
 || DOUBLE || Double || getDouble ||
-|| DECIMAL || BigDecimal || getBigDecimal ||
+|| DECIMAL || `BigDecimal` || getBigDecimal ||
 || DATE || Date || getDate ||
 || TIMESTAMP || Timestamp || getTimestamp  ||
 || VARBINARY || byte[] || getBytes ||
