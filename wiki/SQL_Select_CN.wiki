@@ -18,7 +18,8 @@ tbl_main_name [alias_name]
 }}}
 
 各部分含义:
-  * select_expr - 返回值，字段名或<a href="http://code.google.com/p/flashdb/wiki/SQL_function_CN">sql函数</a>
+  * select_expr - 返回的结果列
+    # 可以是字段名或<a href="http://code.google.com/p/flashdb/wiki/SQL_function_CN">sql函数</a>
     # 可使用AS指定返回的列名
     # 可使用 * 或 tbl.* 返回所有列
     # 支持分组聚合函数或字段结果函数
