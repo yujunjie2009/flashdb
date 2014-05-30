@@ -6,6 +6,13 @@
 查询访问量很大, 数据量适中。这是大多数搜索系统适用的模式。
 <br/>
 
+=== 一般用法 ===
+  * 主服务器用于写操作，从服务器用于检索服务。
+  * 所有服务器上的表名及表结构相同。
+  * 在主服务器上写操作完成后，先执行 <font color="green">OPTIMIZE TABLE xxx</font> 进行优化。
+  * 再执行 <font color="green">RUNON REPLICATION SLAVES NOPARALLEL <strong>LOAD TABLE DATA xxx FROM REPLICATION MASTER</strong></font> 使各个从服务器同步切换到新数据;
+<br/>
+
 === 配置(flashdb.properties) ===
 {{{
 default_analyzer_bean=IKAnalyzer
@@ -25,10 +32,3 @@ replication_slaves=192.168.0.11,192.168.0.12,192.168.0.13
   * replication_master: 主服务器的IP地址;
   * replication_slaves: 从服务器的IP地址(逗号间隔)
 注意: 所有Web服务器的端口和上下文根应保持一致.
-<br/>
-
-=== 一般用法 ===
-  * 主服务器用于写操作，从服务器用于检索服务。
-  * 所有服务器上的表名及表结构相同。
-  * 在主服务器上写操作完成后，先执行 <font color="green">OPTIMIZE TABLE xxx</font> 进行优化。
-  * 再执行 <font color="green">RUNON REPLICATION SLAVES NOPARALLEL <strong>LOAD TABLE DATA xxx FROM REPLICATION MASTER</strong></font> 使各个从服务器同步切换到新数据;
