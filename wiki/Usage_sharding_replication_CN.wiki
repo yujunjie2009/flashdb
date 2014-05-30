@@ -35,4 +35,5 @@ replication_slaves=192.168.0.11,192.168.0.12,192.168.0.13
   * 各配置项的含义，参见<a href="http://code.google.com/p/flashdb/wiki/Usage_Standalone_CN">单机</a>、<a href="http://code.google.com/p/flashdb/wiki/Usage_sharding_CN">数据分片</a>、<a href="http://code.google.com/p/flashdb/wiki/Usage_replication_CN">主从复制</a>;
   * 各服务器的配置项replication_master/replication_slaves/sharding_master/sharding_slaves的值需根据自身在网络中的角色进行不同配置；
   * 各组服务器的分片服务器数应保持一致;
+  * 每组服务器的sharding_slaves分片顺序应保持一一对应;
 注意: 所有Web服务器的端口和上下文根应保持一致.
