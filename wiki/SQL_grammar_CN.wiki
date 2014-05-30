@@ -4,7 +4,7 @@
 {{{
 CREATE TABLE tbl_name ( field_definition ..., PRIMARY KEY(..) ) [table_options]
 }}}
-<a href="http://code.google.com/p/flashdb/wiki/SQL_CreateTable_CN">创建表</a>. FlashDB的表必须指定一个或多个字段作为主键。
+<a href="http://code.google.com/p/flashdb/wiki/SQL_CreateTable_CN">创建表</a>： FlashDB的表必须指定一个或多个字段作为主键。
 <br/>
 
 {{{
@@ -22,11 +22,11 @@ TRUNCATE TABLE tbl_name
 {{{
 FLUSH TABLE tbl_name
 }}}
-提交表的写缓存: FlashDB的特性,未FLUSH前,所有写操作对SELECT不可见。
+提交表的写缓存： FlashDB的特性，未FLUSH前，所有写操作对SELECT不可见。
 <br/>
 
 {{{
 OPTIMIZE TABLE tbl_name
 }}}
-优化表: 表多次写入后，会产生数据碎片，优化有助于提高检索性能。
+优化表： 表多次写入后，会产生数据碎片，优化有助于提高检索性能。
 <br/>
