@@ -18,6 +18,7 @@ tbl_main_name [alias_name]
   * FROM - 检索的表
     # 第一张表为主表
     # 支持 LEFT JOIN , 但必须与主表关联，且仅支持单字段相等的关联关系
+    # 不支持 INNER JOIN , 但很多情况下可以用 IN (SELECT ... FROM ...) 达到类似效果
     # 表可以指定别名，以便在该sql的其他部分使用
   * WHERE - 条件过滤
     # 未索引的字段，不可以进行检索
