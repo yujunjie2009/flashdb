@@ -32,14 +32,24 @@ OPTIMIZE TABLE tbl_name
 <br/>
 
 {{{
-LOAD TABLE DATA tbl_name  FROM LOCAL tbl_name0
-LOAD TABLE DATA tbl_name  FROM SHARDING MASTER
-LOAD TABLE DATA tbl_name  FROM REPLICATION MASTER
+SYNC TABLE DATA tbl_name FROM data_source_table
 }}}
-同步表的数据
+同步表的数据。数据来源表有三种方式：
+  * LOCAL other_tbl_name 从本机上的另一张表other_tbl_name同步
+  * SHARDING MASTER 从配置项sharding_master指定服务器上的同名表同步
+  * REPLICATION MASTER 从配置项replication_master指定服务器上的同名表同步
+<br/>
+
+{{{
+RUNON SHARDING|REPLICATION [MASTER] SLAVES [NOPARALLEL] sql_line
+}}}
+在多台服务器上执行同一句sql_line。选项意义：
+  * SHARDING|REPLICATION 对应配置项中的 sharding_slaves 或 replication_slaves 中指定的多台服务器
+  * MASTER 表示在主服务器(本机)上也执行 sql_line
+  * NOPARALLEL 表示每台服务器依次运行。未指定时默认为同时并行。
 <br/>
 
 {{{
 SYSCALL bean_id.method_name(...)
 }}}
-系统调用： 调用spring配置中bean_id相应对象的method_name方法。
+系统调用： 调用服务器spring配置中bean_id相应对象的method_name方法。
