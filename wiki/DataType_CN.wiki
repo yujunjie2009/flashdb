@@ -10,7 +10,7 @@
 || DECIMAL || `BigDecimal` || getBigDecimal ||
 || DATE || Date || getDate ||
 || TIMESTAMP || Timestamp || getTimestamp  ||
-|| VARBINARY || byte[] || getBytes ||
+|| VARBINARY || `byte[]` || getBytes ||
 || `x[]` || `x[]` || `(x[])getObject` ||
 FlashDB
 	
