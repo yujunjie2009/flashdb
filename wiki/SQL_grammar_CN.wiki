@@ -32,7 +32,7 @@ OPTIMIZE TABLE tbl_name
 <br/>
 
 {{{
-SYNC TABLE DATA tbl_name FROM data_source_table
+LOAD TABLE DATA tbl_name FROM data_source_table
 }}}
 同步表的数据。数据来源表有三种方式：
   * LOCAL other_tbl_name - 从本机上的另一张表 other_tbl_name 同步
