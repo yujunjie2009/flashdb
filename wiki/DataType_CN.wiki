@@ -22,6 +22,7 @@ FlashDB数据类型的特殊之处:
     # 保留末尾空格. 因此 'abc ' != 'abc'
     # 区分大小写. 因此 'aBc' != 'abc'
     # 若字段TOKENIZED分词，检索WHERE/GROUP时，是根据其中每个词进行单独计算的
+    # FlashDB的字符串常量，使用单引号或双引号均可。双引号中可嵌单引号，无需转义。
   * BIT 相应的SQL常量为true或false
   * INT/BIGINT 作为单字段主键时,值不能为0
   * DECIMAL 最多存储4位小数, 取值范围 ±2^59
