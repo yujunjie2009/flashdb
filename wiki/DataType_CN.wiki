@@ -27,5 +27,5 @@ FlashDB数据类型的特殊之处:
     # 相应的SQL常量以`[]`括起来,逗号间隔
     # 客户端工具SQuirreL SQL Client无法正常查看多值字段的值，可使用Array2String函数转换后查看。例如
 {{{
-SELECT ARRAY2STRING(col_name) FROM tbl_name
+SELECT Array2String(col_name) FROM tbl_name
 }}}
