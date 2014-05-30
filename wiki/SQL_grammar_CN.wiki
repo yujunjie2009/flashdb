@@ -3,12 +3,14 @@
 
 {{{
 CREATE TABLE tbl_name ( field_definition ..., PRIMARY KEY(..) ) [table_options]
-}}}<a href="http://code.google.com/p/flashdb/wiki/SQL_CreateTable_CN">创建表</a>
+}}}
+<a href="http://code.google.com/p/flashdb/wiki/SQL_CreateTable_CN">创建表</a>
 <br/>
 
 {{{
 DROP TABLE [IF EXISTS] tbl_name
-}}}删除表
+}}}
+删除表
 <br/>
 
 {{{
