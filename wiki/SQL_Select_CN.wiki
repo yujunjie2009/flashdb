@@ -30,7 +30,7 @@ tbl_main_name [alias_name]
     # 表可以指定别名，以便在该sql的其他部分使用
   * WHERE - 条件过滤
     # 未索引的字段，不可以进行检索
-    # 支持常见的<a href="#WHERE_expression">条件表达式语法</a>
+    # 支持常见的<a href="SQL_Select_CN#WHERE_expression">条件表达式语法</a>
     # 支持过滤函数
   * GROUP BY - 分组计算
     # 仅支持单一字段分组，不支持多字段分组
