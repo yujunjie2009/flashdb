@@ -31,4 +31,4 @@ replication_slaves=192.168.0.11,192.168.0.12,192.168.0.13
   * 主服务器用于写操作，从服务器用于检索服务。
   * 所有服务器上的表名及表结构相同。
   * 在主服务器上写操作完成后，先执行 <font color="green">OPTIMIZE TABLE xxx</font> 进行优化。
-  * 再执行 <font color="#00CCCC">RUNON REPLICATION SLAVES NOPARALLEL</font> <font color="green">LOAD TABLE DATA xxx FROM REPLICATION MASTER</font> 使各个从服务器同步切换到新数据;
+  * 再执行 <font color="green">RUNON REPLICATION SLAVES NOPARALLEL</font> <strong>LOAD TABLE DATA xxx FROM REPLICATION MASTER</strong></font> 使各个从服务器同步切换到新数据;
