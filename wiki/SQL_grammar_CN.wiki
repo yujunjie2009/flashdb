@@ -1,7 +1,7 @@
 #summary SQL 语法
 #labels Phase-Implementation
 
-创建表:
-{{{<a href="http://code.google.com/p/flashdb/wiki/SQL_CreateTable_CN">CREATE TABLE</a> tbl_name ( field1, field2, ..., PRIMARY KEY(..)) table_options }}}<br/>
+<a href="http://code.google.com/p/flashdb/wiki/SQL_CreateTable_CN">创建表</a>:
+{{{CREATE TABLE tbl_name ( field1, field2, ..., PRIMARY KEY(..)) table_options }}}<br/>
 删除表:
 {{{DROP TABLE [IF EXISTS] tbl_name}}}
