@@ -4,12 +4,13 @@
 || VARCHAR || String || getString ||
 || BIT || boolean || getBoolean ||
 || INT || int || getInt ||
-|| BIGINT || _long_ || getLong ||
+|| BIGINT || long || getLong ||
 || FLOAT || float || getFloat ||
+|| DOUBLE || Double || getDouble ||
+|| DECIMAL || BigDecimal || getBigDecimal ||
+|| DATE || Date || getDate ||
+|| TIMESTAMP || Timestamp || getTimestamp  ||
+|| VARBINARY || byte[] || getBytes ||
 
 FlashDB
-	private static final String[] TYPE_NAME = new String[]{"Void", "", "", "", "", "",
-		"Double", "Currency", "Date", "DateTime", "Binary"};
-	private static final String[] TYPE_SQL_NAME = new String[]{"NULL", "", "", "", "", "",
-		"DOUBLE", "DECIMAL", "DATE", "TIMESTAMP", "VARBINARY"};
 	
