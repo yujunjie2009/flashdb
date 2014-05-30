@@ -2,18 +2,18 @@
 #labels Phase-Implementation
 
 类型对照表:
-|| *SQL* || *Java* || *`ResultSet.get(...)`* ||
-|| VARCHAR || String || getString ||
-|| BIT || boolean || getBoolean ||
-|| INT || int || getInt ||
-|| BIGINT || long || getLong ||
-|| FLOAT || float || getFloat ||
-|| DOUBLE || double || getDouble ||
-|| DECIMAL || `BigDecimal` || getBigDecimal ||
-|| DATE || Date || getDate ||
-|| TIMESTAMP || Timestamp || getTimestamp  ||
-|| VARBINARY || `byte[]` || getBytes ||
-|| `x[]` || `x[]` || `(x[])getObject` ||
+|| *SQL* || *Java* || *`ResultSet.get(...)`* || *SQL常量示例* ||
+|| VARCHAR || String || getString || 'abc' ||
+|| BIT || boolean || getBoolean || true ||
+|| INT || int || getInt || 123 ||
+|| BIGINT || long || getLong || 123456 ||
+|| FLOAT || float || getFloat || 123.3 ||
+|| DOUBLE || double || getDouble || 1234.432 ||
+|| DECIMAL || `BigDecimal` || getBigDecimal || 123.2 ||
+|| DATE || Date || getDate || '2012-01-02' ||
+|| TIMESTAMP || Timestamp || getTimestamp  || '2012-01-02 13:30:20' ||
+|| VARBINARY || `byte[]` || getBytes || _不支持_ ||
+|| `x[]` || `x[]` || `(x[])getObject` || ['abc','cba','ddd'] ||
 
 <br/>
 FlashDB与ANSI SQL的区别:
