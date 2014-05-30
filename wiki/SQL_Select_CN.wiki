@@ -47,6 +47,14 @@ tbl_main_name [alias_name]
     # 只有一个值时，表示最多返回的行数
 
 === 条件表达式语法 ===
-  * 比较操作符: `= != > < >= <=`
+  * 比较操作符: `= <> != > < >= <=`
+    # 操作符左侧必须为字段名
+    # 操作符右侧必须为sql常量或变量?
   * 布尔操作符: AND OR NOT
-  * 空值判断: IS NULL
+  * 空值判断: column_name IS NULL
+  * IN查询:
+    # 常量查询: column_name IN (value1, value2, ...)
+    # 变量查询(仅用于JDBC编程执行): column_name IN ?
+    # SELECT子查询: column_name IN (SELECT column_name2 FROM tbl_name2 ...)
+  * 过滤函数
+  * 支持括号嵌套，以改变表达式计算优先级
