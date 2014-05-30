@@ -26,6 +26,7 @@ heart_beat_sql=select count(*) from sample_table
 
 web_port=8080
 web_context=/flashdb/
+
 sharding_master=10.19.0.10
 sharding_slaves=10.19.0.11,10.19.0.12,10.19.0.13
 default_shard_count=6
