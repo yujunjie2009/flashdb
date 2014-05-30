@@ -13,3 +13,13 @@
 || min(column_cmp, column_ret) || 最小值 || 取column_cmp字段值最小的那行对应的column_ret字段的值 ||
 || array(column_name) || 汇总成多值 || 将指定字段的值,汇总成多值 ||
 || `ArrayDistinct(column_name)` || 汇总并去重 || 汇总成多值,并去重 ||
+
+=== 字段结果函数 ===
+|| Array2String(column_name) || 多值字段转为字符串 || 主要用于方便查看分析 ||
+|| Binary2ObjString(column_name) || 二进制字段值转为字符串 || 先反序列化为Java对象，再返回对象`.toString()` ||
+|| Highlight(keywords, column_name [, max_length]) || 检索词高亮 ||  ||
+
+=== 过滤函数 ===
+|| LuceneQuery('string') || 用于支持Lucene语法的过滤条件 ||  ||
+|| Keyword(column_name) || keywords中所有词都必须出现 || 先反序列化为Java对象，再返回对象`.toString()` ||
+|| AnyKeyword(keyword, column_name [, max_length]) || keywords中任一词都出现即可 ||  ||
