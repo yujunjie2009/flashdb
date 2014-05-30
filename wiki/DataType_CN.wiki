@@ -22,6 +22,10 @@ FlashDB数据类型的特殊之处:
   * BIT 相应的SQL常量为true或false
   * INT/BIGINT 作为单字段主键时,值不能为0
   * DECIMAL 最多存储4位小数, 取值范围 ±2^59
+  * VARBINARY 最多存储2^31个字节，不支持索引。当存储的为Java对象时，使可使用Binary2ObjString函数转换后查看。例如
+{{{
+SELECT Binary2ObjString(col_name) FROM tbl_name
+}}}
   * 支持多值字段，如 `VARCHAR[]` , `INT[]` 对应Java中相应的数组类型
     # 检索WHERE/GROUP时，是根据其中每个值进行单独计算的
     # 相应的SQL常量以`[]`括起来,逗号间隔
