@@ -1,0 +1,16 @@
+#summary data type
+
+|| *SQL* || *Java* || *`ResultSet.get(...)`* ||
+|| VARCHAR || String || getString ||
+|| BIT || boolean || getBoolean ||
+|| INT || int || getInt ||
+|| BIGINT || long || getLong ||
+|| FLOAT || float || getFloat ||
+|| DOUBLE || Double || getDouble ||
+|| DECIMAL || `BigDecimal` || getBigDecimal ||
+|| DATE || Date || getDate ||
+|| TIMESTAMP || Timestamp || getTimestamp  ||
+|| VARBINARY || byte[] || getBytes ||
+
+FlashDB
+	
