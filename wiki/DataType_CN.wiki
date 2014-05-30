@@ -1,6 +1,7 @@
 #summary 数据类型
 #labels Phase-Implementation
 
+类型对照表:
 || *SQL* || *Java* || *`ResultSet.get(...)`* ||
 || VARCHAR || String || getString ||
 || BIT || boolean || getBoolean ||
@@ -13,7 +14,8 @@
 || TIMESTAMP || Timestamp || getTimestamp  ||
 || VARBINARY || `byte[]` || getBytes ||
 || `x[]` || `x[]` || `(x[])getObject` ||
-<br/>
+
+<br/><br/>
 
 FlashDB与ANSI SQL的区别:
   * 所有类型都不能指定长度;
