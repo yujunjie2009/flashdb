@@ -1,0 +1,15 @@
+#summary 数据类型
+
+|| *SQL* || *Java* || *ResultSet get* ||
+|| VARCHAR || String || getString(...) ||
+|| BIT || boolean || getBoolean ||
+|| INT || int || getInt ||
+|| BIGINT || _long_ || getLong ||
+|| FLOAT || float || getFloat ||
+
+FlashDB
+	private static final String[] TYPE_NAME = new String[]{"Void", "", "", "", "", "",
+		"Double", "Currency", "Date", "DateTime", "Binary"};
+	private static final String[] TYPE_SQL_NAME = new String[]{"NULL", "", "", "", "", "",
+		"DOUBLE", "DECIMAL", "DATE", "TIMESTAMP", "VARBINARY"};
+	
