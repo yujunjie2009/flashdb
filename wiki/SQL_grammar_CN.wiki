@@ -3,7 +3,7 @@
 
 <a href="http://code.google.com/p/flashdb/wiki/SQL_CreateTable_CN">创建表</a>:
 {{{
-CREATE TABLE tbl_name ( field_definition,..., PRIMARY KEY(..) ) [table_options]
+CREATE TABLE tbl_name ( field_definition ..., PRIMARY KEY(..) ) [table_options]
 }}}
 
 删除表:
