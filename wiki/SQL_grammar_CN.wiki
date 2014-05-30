@@ -2,7 +2,7 @@
 #labels Phase-Implementation
 
 {{{
-CREATE TABLE tbl_name ( field_definition ..., PRIMARY KEY(..) ) [table_options]
+CREATE TABLE tbl_name ( column_definition ..., PRIMARY KEY(..) ) [table_options]
 }}}
 <a href="http://code.google.com/p/flashdb/wiki/SQL_CreateTable_CN">创建表</a>： FlashDB的表必须指定一个或多个字段作为主键。
 <br/>
