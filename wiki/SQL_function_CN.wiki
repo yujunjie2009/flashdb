@@ -1,0 +1,15 @@
+#summary SQL 函数
+#labels Phase-Implementation
+
+=== 分组聚合函数 ===
+|| count() || 计数 ||  ||
+|| count(*) || 计数 ||  ||
+|| count(column_name) || 字段去重计数 ||  ||
+|| sum(column_name) || 数值求和 ||  ||
+|| avg(column_name) || 数值平均值 ||  ||
+|| max(column_name) || 最大值 ||  ||
+|| max(column_cmp, column_ret) || 最大值 || 取column_cmp字段值最大的那行对应的column_ret字段的值 ||
+|| min(column_name) || 最小值 ||  ||
+|| min(column_cmp, column_ret) || 最小值 || 取column_cmp字段值最小的那行对应的column_ret字段的值 ||
+|| array(column_name) || 汇总成多值 || 将指定字段的值,汇总成多值 ||
+|| ArrayDistinct(column_name) || 汇总并去重 || 汇总成多值,并去重 ||
