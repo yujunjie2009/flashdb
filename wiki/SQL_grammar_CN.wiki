@@ -37,3 +37,9 @@ LOAD TABLE DATA tbl_name  FROM SHARDING MASTER
 LOAD TABLE DATA tbl_name  FROM REPLICATION MASTER
 }}}
 同步表的数据
+<br/>
+
+{{{
+SYSCALL bean_id.method_name(...)
+}}}
+系统调用： 调用spring配置中bean_id相应对象的method_name方法。
