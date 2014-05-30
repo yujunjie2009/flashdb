@@ -11,6 +11,6 @@
 || DATE || Date || getDate ||
 || TIMESTAMP || Timestamp || getTimestamp  ||
 || VARBINARY || byte[] || getBytes ||
-|| x[] || x[] || (x[])getObject ||
+|| `x[]` || `x[]` || `(x[])getObject` ||
 FlashDB
 	
