@@ -7,7 +7,8 @@ CREATE TABLE tbl_name ( column_definition ..., PRIMARY KEY(..) ) [table_options]
 
 _column_definition_:
 {{{
-col_name type [INDEXED] [TOKENIZED] [NOSTORED] [AUTO_INCREMENT] [NOT NULL] [COMMENT 'string'] [ANALYZER 'string'] [CODEC 'string']
+col_name type [INDEXED] [TOKENIZED] [NOSTORED] [AUTO_INCREMENT] [NOT NULL]
+              [COMMENT 'string'] [ANALYZER 'string'] [CODEC 'string']
 }}}
 
 _table_options_:
