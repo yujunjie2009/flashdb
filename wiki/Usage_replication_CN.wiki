@@ -1,14 +1,28 @@
 #summary 部署模式 - 主从复制
 #labels Phase-Deploy
 
-== Introduction =
 
-Add your content here.
+=== 适用场景 ===
+
+查询访问量很大, 数据量适中。这是大多数搜索系统适用的场景。
 
 
-= Details =
+=== 配置(flashdb.properties) ===
+{{{
+default_analyzer_bean=IKAnalyzer
+rmi_port=1999
+plugin_jar_files=commons-dbcp-1.4.jar,commons-pool-1.5.4.jar,mysql-connector-java-5.1.17.jar,flashdb-ik-4.7.2.jar
+heart_beat_sql=select count(*) from sample_table
 
-Add your content here.  Format your content with:
-  * Text in *bold* or _italic_
-  * Headings, paragraphs, and lists
-  * Automatic links to other wiki pages
+web_port=8080
+web_context=/flashdb/
+replication_master=192.168.0.10
+replication__slaves=192.168.0.11,192.168.0.12,192.168.0.13
+}}}
+<br/>
+配置项说明:
+  * web_port: Web服务器的端口;
+  * web_context: flashdb-webserver-xxx.war在Web中部署的上下文根;
+  * replication_master: 主服务器的IP地址;
+  * replication__slaves: 从服务器的IP地址(逗号间隔)
+注意: 所有Web服务器的端口和上下文根应保持一致.
