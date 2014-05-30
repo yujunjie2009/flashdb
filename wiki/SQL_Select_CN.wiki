@@ -50,6 +50,7 @@ tbl_main_name [alias_name]
   * 比较操作符: `= <> != > < >= <=`
     # 操作符左侧必须为字段名
     # 操作符右侧必须为sql常量或变量?
+    # 字符串比较区分大小写
   * 布尔操作符: AND OR NOT
   * 空值判断: column_name IS NULL
   * IN查询:
