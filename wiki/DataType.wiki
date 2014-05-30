@@ -1,7 +1,7 @@
 #summary 数据类型
 
-|| *SQL* || *Java* || *ResultSet get* ||
-|| VARCHAR || String || getString(...) ||
+|| *SQL* || *Java* || *`ResultSet.get(...)`* ||
+|| VARCHAR || String || getString ||
 || BIT || boolean || getBoolean ||
 || INT || int || getInt ||
 || BIGINT || _long_ || getLong ||
