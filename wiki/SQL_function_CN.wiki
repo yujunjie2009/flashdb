@@ -26,8 +26,8 @@ SELECT id,ftext,Highlight('microsoft google', ftext) FROM sample_fulltext</code>
 
 === 过滤函数 ===
 || `LuceneQuery('query_string', default_field)` || 基于<a href="http://lucene.apache.org/core/4_7_2/queryparser/org/apache/lucene/queryparser/classic/package-summary.html#Overview">Lucene查询语法</a>的检索过滤 ||  ||
-|| `Keyword('words_string', column_name [, column_name2 ...])` || 基于关键词的检索过滤 || 所有检索词必须都出现 ||
-|| `AnyKeyword('words_string', column_name [, column_name2 ...])` || 基于关键词的检索过滤 || 任一检索词出现即可 ||
+|| `Keyword('words_string', column_name [, column_name2 ...])` || 基于关键词的检索过滤 ||  ||
+|| `AnyKeyword('words_string', column_name [, column_name2 ...])` || 基于关键词的检索过滤 || 类似Keyword函数,区别是任一检索词出现即可 ||
 
 示例:
 <code language="sql">
@@ -36,12 +36,13 @@ SELECT * FROM sample_fulltext WHERE Keyword('microsoft topped', ftitle, ftext)
 SELECT * FROM sample_fulltext WHERE AnyKeyword('microsoft topped', ftitle, ftext)</code>
 
 === 排序函数 ===
-|| `Keyword('string', column_name, boost [, column_name2, boost2])` || 基于TF/IDF模型的Lucene排序 || 权重越大的字段,匹配的结果排序越靠前 ||
+|| `Keyword('words_string', column_name, boost [, column_name2, boost2])` || 基于TF/IDF模型的Lucene排序 || 权重越大的字段,匹配的结果排序越靠前 ||
+|| `AnlyKeyword('words_string', column_name, boost [, column_name2, boost2])` || 基于TF/IDF模型的Lucene排序 || 类似Keyword函数,区别是任一检索词出现即可 ||
 || `Probability(keyword)` || 基于概率模型的排序 ||  ||
 || `AssignOrder(keyword)` || 指定的特定行的排序 ||  ||
 
 示例:
 <code language="sql">
 SELECT * FROM sample_fulltext ORDER BY LuceneQuery('ftitle:microsoft^5 OR ftext:microsoft', ftext)
-SELECT * FROM sample_fulltext ORDER BY Keyword('microsoft topped', ftitle, 5, ftext, 1)
-SELECT * FROM sample_fulltext ORDER BY AnyKeyword('microsoft topped', ftitle, 5, ftext, 1)</code>
+SELECT * FROM sample_fulltext ORDER BY Keyword('microsoft', ftitle, 5, ftext, 1)
+SELECT * FROM sample_fulltext ORDER BY AnyKeyword('microsoft', ftitle, 5, ftext, 1)</code>
