@@ -38,8 +38,7 @@ SELECT * FROM sample_fulltext WHERE AnyKeyword('microsoft topped', ftitle, ftext
 === 排序函数 ===
 || `Keyword('words_string', column_name, boost [, column_name2, boost2])` || 基于TF/IDF模型的Lucene排序 || 权重越大的字段,匹配的结果排序越靠前 ||
 || `AnlyKeyword('words_string', column_name, boost [, column_name2, boost2])` || 基于TF/IDF模型的Lucene排序 || 类似Keyword函数,区别是任一检索词出现即可 ||
-|| `Probability(row_prob, 'words_string', column_name, prob [, column_name2, prob2])`)` || 基于概率模型的排序 || 检索概率越大的行或字段,匹配的结果排序越靠前。
-第一个参数为各行检索概率的字段名。字段概率合计应等于1 ||
+|| `Probability(row_prob, 'words_string', column_name, prob [, column_name2, prob2])`)` || 基于概率模型的排序 || 检索概率越大的行或字段,匹配的结果排序越靠前 ||
 || `AssignOrder(column_name,front_values,behind_values)` || 指定的特定行的排序 || 指定排在最前或最后若干行的字段值 ||
 
 示例:
