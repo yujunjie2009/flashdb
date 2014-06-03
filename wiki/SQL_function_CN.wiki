@@ -2,29 +2,32 @@
 #labels Phase-Implementation
 
 === 分组聚合函数 ===
-|| count() || 计数 ||  ||
-|| `count(*)` || 计数 ||  ||
-|| count(column_name) || 字段去重计数 ||  ||
-|| sum(column_name) || 数值求和 ||  ||
-|| avg(column_name) || 数值平均值 ||  ||
-|| max(column_name) || 最大值 ||  ||
-|| max(column_cmp, column_ret) || 最大值 || 取column_cmp字段值最大的那行对应的column_ret字段的值 ||
-|| min(column_name) || 最小值 ||  ||
-|| min(column_cmp, column_ret) || 最小值 || 取column_cmp字段值最小的那行对应的column_ret字段的值 ||
-|| array(column_name) || 汇总成多值 || 将指定字段的值,汇总成多值 ||
+|| COUNT() || 计数 ||  ||
+|| `COUNT(*)` || 计数 ||  ||
+|| COUNT(column_name) || 字段去重计数 ||  ||
+|| SUM(column_name) || 数值求和 ||  ||
+|| AVG(column_name) || 数值平均值 ||  ||
+|| MAX(column_name) || 最大值 ||  ||
+|| MAX(column_cmp, column_ret) || 最大值 || 取column_cmp字段值最大的那行对应的column_ret字段的值 ||
+|| MIN(column_name) || 最小值 ||  ||
+|| MIN(column_cmp, column_ret) || 最小值 || 取column_cmp字段值最小的那行对应的column_ret字段的值 ||
+|| ARRAY(column_name) || 汇总成多值 || 将指定字段的值,汇总成多值 ||
 || `ArrayDistinct(column_name)` || 汇总并去重 || 汇总成多值,并去重 ||
 
 === 字段结果函数 ===
 || Array2String(column_name) || 多值字段转为字符串 || 主要用于方便查看分析 ||
-|| Binary2ObjString(column_name) || 二进制字段值转为字符串 || 先反序列化为Java对象，再返回对象`.toString()` ||
-|| Highlight(keywords, column_name [, max_length]) || 检索词高亮 ||  ||
+|| Binary2ObjString(column_name) || 二进制字段值转为字符串 || 先反序列化为Java对象，再返回对象`.toString()，以方便查看分析` ||
+|| Highlight(keywords, column_name [, max_length]) || 检索词高亮 || 将文本字段中的检索词,以标签<em>...</em>形式进行标注 ||
 
 === 过滤函数 ===
-|| LuceneQuery('string') || 用于支持Lucene语法的过滤条件 ||  ||
-|| Keyword(column_name) || keywords中所有词都必须出现 || 先反序列化为Java对象，再返回对象`.toString()` ||
+|| LuceneQuery('string', column_name) || 基于<a href="http://lucene.apache.org/core/4_7_2/queryparser/org/apache/lucene/queryparser/classic/package-summary.html#Overview">Lucene查询语法</a>的检索过滤 || 参数column_name为默认字段Lucene查询默认字段. 例如:<br/>
+  LuceneQuery('title:abc OR text:abc', text)||
+|| Keyword('string', column_name, column_name2]) || 基于关键词的检索过滤 || 多个检索词之间的关系为AND. 例如:<br/>
+  Keyword('abc xyz', title, text)` ||
 || AnyKeyword(keyword, column_name [, max_length]) || keywords中任一词都出现即可 ||  ||
 
 === 排序函数 ===
-|| Keyword(column_name) || 根据TF/IDF模型的排序 ||  ||
+|| Keyword('string', column_name, boost [, column_name2, boost2]) || 根据TF/IDF模型的排序 || 权重越大的字段,匹配的结果排序越靠前. 例如:<br/>
+  Keyword('abc xyz', title, 5, text, 1)` ||
 || Probability(keyword) || 基于概率模型的排序 ||  ||
 || AssignOrder(keyword) || 指定含特定值的行的顺序 ||  ||
