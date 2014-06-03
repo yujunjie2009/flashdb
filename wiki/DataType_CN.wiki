@@ -31,7 +31,8 @@ FlashDB数据类型的特殊之处:
 {{{
 SELECT Binary2ObjString(col_name) FROM tbl_name
 }}}
-  * 支持多值字段，如 `VARCHAR[]` , `INT[]` 对应Java中相应的数组类型
+  * 支持多值字段，如 `VARCHAR[]` , `INT[]`
+    # 字段值的Java数据类型为相应的数组类型
     # 检索WHERE/GROUP时，是根据其中每个值进行单独计算的
     # 相应的SQL常量以`[]`括起来,逗号间隔
     # 客户端工具`SQuirreL SQL Client`无法正常查看多值字段的值，可使用`Array2String`函数转换后查看。例如
