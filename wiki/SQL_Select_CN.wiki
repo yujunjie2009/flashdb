@@ -19,20 +19,22 @@ tbl_main_name [alias_name]
 
 各部分含义:
   * select_expr - 返回的结果列
-    # 可以是字段名或<a href="http://code.google.com/p/flashdb/wiki/SQL_function_CN">sql函数</a>
+    # 可以是字段名或sql函数
+      # 无GROUP BY时，支持<a href="http://code.google.com/p/flashdb/wiki/SQL_function_CN#字段结果函数">字段结果函数</a>
+      # 有GROUP BY时，支持<a href="http://code.google.com/p/flashdb/wiki/SQL_function_CN#分组聚合函数">分组聚合函数</a>
     # 可使用AS指定返回的列名
     # 可使用 * 或 tbl.* 返回所有列
-    # 支持分组聚合函数或字段结果函数
   * FROM - 检索的表
     # 第一张表为主表
     # 支持 LEFT JOIN , 但必须与主表关联，且仅支持单字段相等的关联关系
       # 有GROUP BY时，仅支持用分组字段进行关联
     # 不支持 INNER JOIN , 但很多情况下可以用 IN (SELECT ... FROM ...) 达到类似效果
+    # 仅主表(第一张表)的字段可作为函数参数
     # 表可以指定别名，以便在该sql的其他部分使用
   * WHERE - 条件过滤
     # 未索引的字段，不可以进行检索
     # 支持常见的<a href="http://code.google.com/p/flashdb/wiki/SQL_Select_CN#WHERE_expression">条件表达式语法</a>
-    # 支持过滤函数
+    # 支持<a href="http://code.google.com/p/flashdb/wiki/SQL_function_CN#过滤函数">过滤函数</a>
   * GROUP BY - 分组计算
     # 仅支持单一字段分组，不支持多字段分组
     # 若返回分组字段，则该字段必须出现在SELECT部分的最前面
@@ -40,7 +42,7 @@ tbl_main_name [alias_name]
   * ORDER BY - 结果排序
     # 支持多重排序，逗号间隔
     # 支持使用 DESC 按倒序排
-    # 无GROUP BY时，支持排序函数
+    # 无GROUP BY时，支持<a href="http://code.google.com/p/flashdb/wiki/SQL_function_CN#排序函数">排序函数</a>
     # 有GROUP BY时，仅支持结果字段的排序
       # 聚合函数的结果，可使用结果列的别名进行排序。
   * LIMIT - 结果行数限制
