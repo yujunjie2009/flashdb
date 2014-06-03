@@ -36,6 +36,7 @@ DELETE FROM tbl_name WHERE key_col_name1=value1 [ AND key_col_name2=value2 ...]
 删除单条数据。FlashDB删除数据的WHERE条件仅支持主键字段等于某值(即一次只能删除一行数据)
 <br/>
 
+<wiki:comment>
 {{{
 INSERT INTO tbl_name (col_name,...) BY ...
 REPLACE INTO tbl_name (col_name,...) BY ...
@@ -45,7 +46,7 @@ DELETE FROM tbl_name BY ...
 }}}
 <a href="http://code.google.com/p/flashdb/wiki/SQL_transfer_CN">批量数据迁移</a>. FlashDB的扩展功能，用于支持批量数据导入和整理计算。
 <br/>
-
+</wiki:comment>
 
 {{{
 FLUSH TABLE tbl_name
