@@ -20,12 +20,16 @@
 || Highlight(keywords, column_name [, max_length]) || 检索词高亮 || 将文本字段中的检索词,以标签<em>...</em>形式进行标注 ||
 
 === 过滤函数 ===
-|| LuceneQuery('string', column_name) || 基于<a href="http://lucene.apache.org/core/4_7_2/queryparser/org/apache/lucene/queryparser/classic/package-summary.html#Overview">Lucene查询语法</a>的检索过滤 || 参数column_name为默认字段Lucene查询默认字段. 例如:<br/>
-  LuceneQuery('title:abc OR text:abc', text)||
+|| LuceneQuery('query_string', default_field) || 基于<a href="http://lucene.apache.org/core/4_7_2/queryparser/org/apache/lucene/queryparser/classic/package-summary.html#Overview">Lucene查询语法</a>的检索过滤 ||  ||
 || Keyword('string', column_name, column_name2]) || 基于关键词的检索过滤 || 多个检索词之间的关系为AND. 例如:<br/>
   Keyword('abc xyz', title, text)` ||
 || AnyKeyword(keyword, column_name [, max_length]) || keywords中任一词都出现即可 ||  ||
 
+示例:
+{{{
+SELECT * FROM sample_fulltext WHERE LuceneQuery('ftitle:microsoft OR ftext:microsoft', ftext)
+SELECT * FROM sample_fulltext WHERE LuceneQuery('ftitle:microsoft OR ftext:microsoft', ftext)
+}}}
 === 排序函数 ===
 || Keyword('string', column_name, boost [, column_name2, boost2]) || 根据TF/IDF模型的排序 || 权重越大的字段,匹配的结果排序越靠前. 例如:<br/>
   Keyword('abc xyz', title, 5, text, 1)` ||
