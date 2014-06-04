@@ -19,7 +19,7 @@
 
 === 配置(flashdb.properties) ===
 {{{
-default_analyzer_bean=IKAnalyzer
+default_tokenizer_bean=IKTokenizer
 rmi_port=1999
 plugin_jar_files=commons-dbcp-1.4.jar,commons-pool-1.5.4.jar,mysql-connector-java-5.1.17.jar,flashdb-ik-4.7.2.jar
 heart_beat_sql=select count(*) from sample_table
