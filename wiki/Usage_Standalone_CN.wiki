@@ -17,14 +17,14 @@
 
 === 配置(flashdb.properties) ===
 {{{
-default_analyzer_bean=IKAnalyzer
+default_tokenizer_bean=IKTokenizer
 rmi_port=1999
 plugin_jar_files=commons-dbcp-1.4.jar,commons-pool-1.5.4.jar,mysql-connector-java-5.1.17.jar,flashdb-ik-4.7.2.jar
 heart_beat_sql=select count(*) from sample_table
 }}}
 
 配置项说明:
-  * default_analyzer_bean: 默认的文本分词器(值为在plugin.spring.xml文件中的相应bean的id);
+  * default_tokenizer_bean: 默认的文本分词器(值为在plugin.spring.xml文件中的相应bean的id);
   * rmi_port: RMI通信协议的服务端口. 0表示不开放RMI通信协议服务(可通过httpinvoker/hessina通信协议访问);
   * plugin_jar_files: 扩展插件所需的jar文件名(逗号间隔). jar文件存放在/home/flashdb/plugin/目录下;
   * heart_beat_sql: 服务心跳监测时执行的sql. 心跳监测页 http://127.0.0.1:8080/flashdb/do/heartbeat.json
