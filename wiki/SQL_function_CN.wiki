@@ -21,7 +21,7 @@ SELECT fwords,COUNT(),COUNT(fc),MIN(fc),MIN(fc,fa),ARRAY(fb),ArrayDistinct(fb) F
 === 字段结果函数 ===
 || Array2String(column_name) || 多值字段转为字符串 || 主要用于方便查看分析 ||
 || Binary2ObjString(column_name) || 二进制字段值转为字符串 || 先反序列化为Java对象，再返回对象`.toString()，以方便查看分析` ||
-|| Highlight(keywords, column_name [, max_length]) || 检索词高亮 || 将文本字段中的检索词,以标签<em>...</em>形式进行标注 ||
+|| Highlight(keywords, column_name [, max_length]) || 检索词高亮 || 将文本字段中的检索词,以标签`<em>...</em>`形式进行标注 ||
 
 示例:
 <code language="sql">
