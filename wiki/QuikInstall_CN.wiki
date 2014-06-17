@@ -22,7 +22,9 @@
 
 === 编程开发 ===
  * 1、可按照普通的数据库开发方式进行。推荐使用spring-jdbc中的`JdbcTemplate`
- * 2、所需JDBC驱动包：<a href="http://flashdb.googlecode.com/svn/jar/flashdb-client-1.0.2.jar">flashdb-client-xxx.jar</a>  或者通过Maven引用:
+ * 2、所需JDBC驱动包：<a href="http://flashdb.googlecode.com/svn/jar/flashdb-client-1.0.2.jar">flashdb-client-xxx.jar</a>
+<wiki:comment>
+  或者通过Maven引用:
 {{{
 <dependency>
   <groupId>com.boyunjian.flashdb</groupId>
@@ -30,3 +32,4 @@
   <version>1.0.2</version>
 </dependency>
 }}}
+</wiki:comment>
