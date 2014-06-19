@@ -24,7 +24,6 @@
  * 可按照普通的数据库开发方式进行。推荐使用spring-jdbc中的`JdbcTemplate`
    # 注意: 所有写表操作(INSERT/UPDATE/DELETE)完成后，需执行SQL语句 FLUSH TABLE xxx ，否则写入的数据还在缓冲区中，查询检索不可见
  * 所需JDBC驱动包：<a href="http://flashdb.googlecode.com/svn/jar/flashdb-client-1.0.2.jar">flashdb-client-xxx.jar</a>
-<wiki:comment>
   或者通过Maven引用:
 {{{
 <dependency>
@@ -33,4 +32,3 @@
   <version>1.0.2</version>
 </dependency>
 }}}
-</wiki:comment>
